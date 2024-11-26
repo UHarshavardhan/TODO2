@@ -64,7 +64,7 @@ async function signUp(req, res) {
       });
       const response = await user.save();
   
-      // Include `userId` in the response
+ 
       res.send(_.pick(response, ["firstName", "lastName", "email", "_id", "userId"]));
     } catch (ex) {
       res.status(400).json({ message: ex.message });

@@ -3,7 +3,7 @@ import axios from "axios";
 import Modal from "react-modal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Sidebar from "../Components/Sidebar"; // Ensure Sidebar is correctly imported
+import Sidebar from "../Components/Sidebar"; 
 
 function TaskManager() {
   const [tasks, setTasks] = useState([]);
@@ -12,7 +12,7 @@ function TaskManager() {
   const [date, setDate] = useState(new Date());
   const [filter, setFilter] = useState("All");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // For sidebar toggle
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
 
   const userId = localStorage.getItem("userId");
 

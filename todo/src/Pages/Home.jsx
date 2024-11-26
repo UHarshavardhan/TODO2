@@ -11,7 +11,7 @@ function Home() {
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
   const [statusFilter, setStatusFilter] = useState("All");
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Sidebar state
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
   const userId = localStorage.getItem("userId");
 
   const fetchTasks = async () => {

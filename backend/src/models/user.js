@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Joi = require("joi");
 const passwordComplexity = require("joi-password-complexity");
-const { v4: uuidv4 } = require("uuid"); // Import UUID library
+
 
 const User = mongoose.model(
   "user",

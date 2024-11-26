@@ -34,13 +34,13 @@ function LogIn() {
         const { token, user } = response.data;
         console.log(response.data);
         localStorage.setItem("token", token);
-        localStorage.setItem("userId", user.userId); // Store the user ID
-        localStorage.setItem("userName", user.name); // Store the user name
-        localStorage.setItem("userEmail", user.email); // Store the user email
+        localStorage.setItem("userId", user.userId); 
+        localStorage.setItem("userName", user.name); 
+        localStorage.setItem("userEmail", user.email); 
 
         toast.success("Login Successful");
 
-        // Navigate to the home page after successful login
+       
         navigate("/home");
       }
     } catch (error) {
@@ -55,7 +55,7 @@ function LogIn() {
       <ToastContainer position="top-right" autoClose={3000} />
 
       <div className="main-component grid grid-cols-1 lg:grid-cols-2 items-center p-6 lg:p-24 min-h-screen bg-gradient-to-r from-blue-200 to-indigo-200">
-        {/* Form Section */}
+      
         <div className="form flex flex-col gap-6 mx-auto max-w-md lg:max-w-lg">
           <h5 className="text-3xl lg:text-5xl text-center">Sign In</h5>
 
@@ -82,7 +82,7 @@ function LogIn() {
           </div>
         </div>
 
-        {/* Image Section */}
+    
         <div className="flex justify-center mt-6 lg:mt-0">
           <img
             src={image1}

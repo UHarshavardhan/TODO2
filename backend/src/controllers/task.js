@@ -32,7 +32,7 @@ const Taskpost = async (req, res) => {
     }
   
     try {
-      let query = { userId }; // Fetch tasks only for the specified user
+      let query = { userId }; 
       if (date) {
         query.date = date;
       }
