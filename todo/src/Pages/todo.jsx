@@ -82,7 +82,7 @@ function TaskManager() {
       <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
 
       <div className="flex flex-col w-full sm:w-3/4 lg:w-4/5 p-4 sm:px-6 bg-white rounded-xl shadow-lg">
-=
+
         <div className="flex justify-between items-center mb-6 mt-8">
           <button
             onClick={() => setIsModalOpen(true)}
