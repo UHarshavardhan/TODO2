@@ -36,7 +36,7 @@ function SignUp() {
     try {
       const { confirmPassword, ...dataToSubmit } = formData;
 
-      const response = await axios.post("http://localhost:3000/api/v1/signup", dataToSubmit);
+      const response = await axios.post("https://todo2-6.onrender.com/api/v1/signup", dataToSubmit);
       if (response.status === 200) {
         toast.success("Registration successful");
         setTimeout(() => navigate("/login"), 3000);

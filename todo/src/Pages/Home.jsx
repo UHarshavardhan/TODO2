@@ -16,7 +16,7 @@ function Home() {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/tasks?userId=${userId}`);
+      const response = await axios.get(`https://todo2-6.onrender.com/api/v1/tasks?userId=${userId}`);
       setTasks(response.data);
       setFilteredTasks(response.data);
     } catch (error) {

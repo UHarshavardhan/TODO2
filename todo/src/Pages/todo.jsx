@@ -18,7 +18,7 @@ function TaskManager() {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/v1/tasks", {
+      const response = await axios.get("https://todo2-6.onrender.com/api/v1/tasks", {
         params: {
           userId,
           filter: filter !== "All" ? filter : undefined,
@@ -34,7 +34,7 @@ function TaskManager() {
   const addTask = async () => {
     if (task && date) {
       try {
-        await axios.post("http://localhost:3000/api/v1/tasks", {
+        await axios.post("https://todo2-6.onrender.com/api/v1/tasks", {
           userId,
           task,
           status,
@@ -51,7 +51,7 @@ function TaskManager() {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/v1/tasks/${id}`, {
+      await axios.delete(`https://todo2-6.onrender.com/api/v1/tasks/${id}`, {
         data: { userId },
       });
       fetchTasks();
@@ -62,7 +62,7 @@ function TaskManager() {
 
   const updateTaskStatus = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:3000/api/v1/tasks/${id}`, {
+      await axios.put(`https://todo2-6.onrender.com/api/v1/tasks/${id}`, {
         userId,
         status: newStatus,
       });
