@@ -28,7 +28,7 @@ function LogIn() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/login", formData);
+      const response = await axios.post("https://todo2-6.onrender.com/api/v1/login", formData);
 
       if (response.status === 200) {
         const { token, user } = response.data;
