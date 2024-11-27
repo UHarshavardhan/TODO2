@@ -11,7 +11,7 @@ function SignUp() {
     { placeholder: "Enter Your Last Name", name: "lastName", type: "text" },
     { placeholder: "Enter Your Mail Id", name: "email", type: "email" },
     { placeholder: "Password", name: "password", type: "password" },
-    { placeholder: "Confirm Password", name: "confirmPassword", type: "password" },
+
   ];
 
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ function SignUp() {
     lastName: "",
     email: "",
     password: "",
-    confirmPassword: "",
+
   });
 
   const navigate = useNavigate();
@@ -28,13 +28,13 @@ function SignUp() {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: name === "email" ? value.toLowerCase() : value,
     });
   };
 
   const handleSubmit = async () => {
     try {
-      const { confirmPassword, ...dataToSubmit } = formData;
+      const {...dataToSubmit } = formData;
 
       const response = await axios.post("https://todo2-6.onrender.com/api/v1/signup", dataToSubmit);
       if (response.status === 200) {
