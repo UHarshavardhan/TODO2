@@ -13,7 +13,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
   return (
     <div>
       <button
-        className="absolute top-4 left-4 text-white text-3xl sm:hidden"
+        className="absolute  text-white text-3xl sm:hidden mr-28"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
          <IoIosMenu />
