@@ -2,6 +2,7 @@ import React from "react";
 import { FcHome, FcCalendar, FcAdvertising, FcSearch } from "react-icons/fc";
 import { IoIosLogOut } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { IoIosMenu } from "react-icons/io";
 
 function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
         className="absolute top-4 left-4 text-white text-3xl sm:hidden"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
-        ☰
+         <IoIosMenu />
       </button>
 
       <div
